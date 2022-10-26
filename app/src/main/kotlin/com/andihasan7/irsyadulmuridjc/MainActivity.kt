@@ -9,6 +9,7 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.material.Button
 import androidx.compose.material.Card
 import androidx.compose.material.MaterialTheme
+import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -21,7 +22,14 @@ import com.andihasan7.irsyadulmuridjc.ui.theme.AppTheme
 class MainActivity : ComponentActivity() {
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
-    setContent { AppTheme { JetpackCompose() } }
+    setContent { 
+        AppTheme {
+            Surface(color = MaterialTheme.colors.background) {
+                JetpackCompose()
+            }
+        }
+                
+    }
   }
 }
 
